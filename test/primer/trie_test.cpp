@@ -9,6 +9,7 @@
 #include "common/exception.h"
 #include "gtest/gtest.h"
 #include "primer/trie.h"
+#include "primer/trie_answer.h"
 
 namespace bustub {
 
@@ -25,6 +26,7 @@ TEST(TrieTest, BasicPutTest) {
 TEST(TrieTest, BasicPutGetTest) {
   auto trie = Trie();
   // Put something
+  
   trie = trie.Put<uint32_t>("test", 233);
   ASSERT_EQ(*trie.Get<uint32_t>("test"), 233);
   // Put something else
